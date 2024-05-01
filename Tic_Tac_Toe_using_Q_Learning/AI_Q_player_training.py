@@ -2,13 +2,13 @@ import numpy as np
 import tkinter as tk
 import copy
 import pickle
-from Q_Learning_Tic_Tac_Toe import Game, QPlayer   
+from Q_Learning_Tic_Tac_Toe import Game,Gametrain, QPlayer   
 
 root = tk.Tk()
 epsilon = 0.9
 player1 = QPlayer(mark="X", epsilon=epsilon)
 player2 = QPlayer(mark="O", epsilon=epsilon)
-game = Game(root, player1, player2)
+game = Gametrain(root, player1, player2)
 
 count_games = 2000
 for episodes in range(count_games):
